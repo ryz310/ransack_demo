@@ -12,8 +12,13 @@
   <%= f.text_field :tel_cont %>
   <br />
 
-  <%= f.label :blood_type_name_eq %>
-  <%= f.text_field :blood_type_name_eq %>
+  <%= f.label :blood_type_id_in %>
+  <% BloodType.all.each do |blood_type| %>
+    <label>
+      <%= f.check_box :blood_type_id_in, {name: 'q[blood_type_id_in][]'}, blood_type.id, nil %>
+      <%= blood_type.name %>
+    </label>
+  <% end %>
   <br />
 
   <%= f.submit 'Search' %>
