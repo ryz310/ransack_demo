@@ -32,10 +32,10 @@
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Tel</th>
-        <th>Blood type</th>
+        <th><%= sort_link @search, :name, 'Name' %></th>
+        <th><%= sort_link @search, :email, 'Email' %></th>
+        <th><%= sort_link @search, :tel, 'Tel' %></th>
+        <th><%= sort_link @search, :blood_type_name, 'Blood type' %></th>
         <th></th>
         <th></th>
         <th></th>
