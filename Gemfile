@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -29,6 +27,19 @@ gem 'jbuilder', '~> 1.2'
 
 # Ransack enables the creation of both simple and advanced search forms
 gem 'ransack'
+
+# for Heroku
+group :production do
+  # Use PostgreSql as the database for Active Record
+  gem 'pg'
+  # Rails 4
+  gem 'rails_12factor'
+end
+
+group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
