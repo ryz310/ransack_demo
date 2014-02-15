@@ -1,5 +1,12 @@
 <h1>Listing users</h1>
 
+<%= search_form_for @search do |f| %>
+  <%= f.label :name_cont %>
+  <%= f.text_field :name_cont %>
+  <%= f.submit 'Search' %>
+  <%= link_to 'Cansel', users_path %>
+<% end %>
+
 <table>
   <thead>
     <tr>
