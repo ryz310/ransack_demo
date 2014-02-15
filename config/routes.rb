@@ -1,4 +1,6 @@
 RansackDemo::Application.routes.draw do
+  root 'users#index'
+
   resources :blood_types
 
   resources :users
