@@ -13,19 +13,19 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, max_length: 128 %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.email_field :email, max_length: 128 %>
   </div>
   <div class="field">
     <%= f.label :tel %><br>
-    <%= f.text_field :tel %>
+    <%= f.telephone_field :tel, max_length: 16 %>
   </div>
   <div class="field">
     <%= f.label :blood_type %><br>
-    <%= f.text_field :blood_type %>
+    <%= f.collection_select :blood_type_id, BloodType.all, :id, :name, include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
