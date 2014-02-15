@@ -3,10 +3,23 @@
 <%= search_form_for @search do |f| %>
   <%= f.label :name_cont %>
   <%= f.text_field :name_cont %>
+  <br />
+  <%= f.label :email_cont %>
+  <%= f.text_field :email_cont %>
+  <br />
+
+  <%= f.label :tel_cont %>
+  <%= f.text_field :tel_cont %>
+  <br />
+
+  <%= f.label :blood_type_name_eq %>
+  <%= f.text_field :blood_type_name_eq %>
+  <br />
+
   <%= f.submit 'Search' %>
   <%= link_to 'Cansel', users_path %>
 <% end %>
-
+<br />
 
 <% if @users.count == 0 %>
   <pre>表示できるユーザーはいません。</pre>
